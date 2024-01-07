@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" clip-rule="evenodd" viewBox="0 0 225 75">
+  <g>
+    <g>
+      <path fill="none" stroke="#46d5a3" stroke-width="4.58" d="M56.084 39.743c.066-.745.098-1.494.098-2.243 0-14.206-11.533-25.739-25.739-25.739-14.206 0-25.739 11.533-25.739 25.739 0 .749.032 1.498.098 2.243-.066-.745-.098-1.494-.098-2.243 0-14.206 11.533-25.739 25.739-25.739 14.206 0 25.739 11.533 25.739 25.739 0 .749-.032 1.498-.098 2.243ZM9.359 52.263c4.816 6.88 12.686 10.976 21.084 10.976s16.268-4.096 21.085-10.976c-4.817 6.88-12.687 10.976-21.085 10.976-8.398 0-16.268-4.096-21.084-10.976Z"/>
+      <path fill="none" stroke="#7063cf" stroke-linecap="butt" stroke-width="4.58" d="M44.729 37.48c0 7.891-6.407 14.299-14.299 14.299-7.892 0-14.3-6.408-14.3-14.299 0-7.893 6.408-14.3 14.3-14.3 6.762 0 12.434 4.703 13.919 11.014.249 1.055.38 2.155.38 3.286v15.279"/>
+      <circle cx="44.225" cy="23.179" r="2.288" fill="#46d5a3"/>
+      <circle cx="54.631" cy="46.299" r="2.288" fill="#7063cf"/>
+      <circle cx="6.256" cy="46.299" r="2.288" fill="#7063cf"/>
+    </g>
+  </g>
+  <g fill="#fff" font-size="46.882">
+    <text x="112.458" y="367.924" font-family="&quot;Manrope-Light&quot;,&quot;Manrope&quot;" font-weight="300" transform="translate(-68.5165 -391.677) scale(1.2225)">SKN</text>
+    <text x="199.26" y="367.924" font-family="&quot;Manrope-Bold&quot;,&quot;Manrope&quot;" font-weight="700" transform="translate(-68.5165 -391.677) scale(1.2225)">AI</text>
+  </g>
+</svg>

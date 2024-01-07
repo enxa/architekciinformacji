@@ -14,11 +14,15 @@
     "@astrojs/mdx": "^2.0.3",
     "@astrojs/svelte": "^5.0.3",
     "@astrojs/vercel": "^6.1.1",
+    "@fontsource-variable/manrope": "^5.0.18",
+    "@fontsource/manrope": "^5.0.18",
+    "@studio-freight/lenis": "^1.0.33",
     "astro": "^4.0.8",
     "autoprefixer": "^10.4.16",
+    "nanostores": "^0.9.5",
     "postcss-easings": "^4.0.0",
     "postcss-preset-env": "^9.3.0",
-    "svelte": "^5.0.0-next.1",
+    "svelte": "5.0.0-next.27",
     "typescript": "^5.3.3"
   }
 }

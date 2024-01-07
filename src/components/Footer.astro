@@ -1,0 +1,42 @@
+<footer>
+  <nav class="rim">
+    <div>
+      <a href="mailto:your.email@example.com">kontakt: architekciinformacji@umk.pl</a>
+    </div>
+    <div>
+      <a href="/">
+        <img src="/assets/icon-youtube.svg" alt="Logo YouTube" />
+      </a>
+      <a href="/">
+        <img src="/assets/icon-instagram.svg" alt="Logo Instagram" />
+      </a>
+      <a href="/">
+        <img src="/assets/icon-fecebook.svg" alt="Logo Fecebook" />
+      </a>
+    </div>
+  </nav>
+</footer>
+
+<style>
+footer {
+  nav {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    div {
+      display: flex;
+      align-items: center;
+      gap: var(--font-size-1);
+      a {
+        color: var(--color-text);
+        img {
+          height: var(--font-size-1)
+        }
+      }
+    }
+  }
+}
+</style>

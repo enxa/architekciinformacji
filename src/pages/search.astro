@@ -1,0 +1,92 @@
+---
+import MainLayout from '../layouts/MainLayout.astro'
+import { GET } from './articles.json'
+
+let response = await GET(Astro)
+const data = await response.json()
+
+const tags = [...new Set(data.flatMap(entry => entry.data.tags))]
+---
+
+<MainLayout>
+  <script>
+    customElements.define('search-modal', class SearchModal extends HTMLElement {
+      constructor() { super()
+        let inputHTML = this.querySelector('input')
+        let formHTML = this.querySelector('form')
+        inputHTML.focus()
+        inputHTML.oninput = event => {
+          // @ts-ignore
+          formHTML.action = event.target.value ? '/term/' + event.target.value : '/term/%20'
+        }    
+      }
+    })
+  </script>
+
+  <search-modal>
+    <section class="rim">
+      <form action="/term/+">
+        <input
+          aria-autocomplete="both" 
+          aria-labelledby="docsearch-label" 
+          id="docsearch-input" 
+          autocomplete="off" 
+          autocorrect="off" 
+          autocapitalize="off" 
+          enterkeyhint="go" 
+          spellcheck="false" 
+          autofocus="true" 
+          placeholder="Wpisz frazę..." 
+          maxlength="64" 
+          type="search" 
+          aria-activedescendant="docsearch-item-0" 
+          aria-controls="docsearch-list"
+        >
+        <button>Szukaj</button>
+      </form>
+      <div>
+        {tags.map(tag => (
+          <a href={'/tag/' + tag}>
+            <button>#{tag}</button>
+          </a>
+        ))}
+      </div>
+    </section>
+  </search-modal>
+
+  <style>
+    search-modal {
+      display: grid;
+      place-items: center;
+      section {
+        width: 100%;
+        @media screen and (min-width: 960px) {
+          width: 60vw;
+        }
+        max-height: 60vh;
+        form {
+          display: grid;
+          grid-template-columns: 5fr 1fr;
+          gap: var(--font-size-1);
+          input, button {
+            width: 100%;
+            margin-bottom: var(--font-size-3);
+            font-size: var(--font-size-2);
+            border: 1px solid var(--color-satan);
+          }
+        }
+        div {
+          display: flex;
+          flex-flow: row wrap;
+          gap: var(--font-size-1);
+          a {
+            gap: var(--font-size-2);
+            button {
+              border: 1px solid var(--color-text);
+            }
+          }
+        }
+      }
+    }
+  </style>
+</MainLayout>

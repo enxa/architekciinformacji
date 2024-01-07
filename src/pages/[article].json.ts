@@ -7,7 +7,7 @@ export const GET: APIRoute = async ({ params }): Promise<Response> => {
 
   if (!slug) {
     return new Response(
-      JSON.stringify({ error: 'No articles' }), {
+      JSON.stringify({ error: 'No article' }), {
       status: 400,
       headers: { 'Content-Type': 'application/json' }
     }
@@ -18,7 +18,7 @@ export const GET: APIRoute = async ({ params }): Promise<Response> => {
 
   if (!article) {
     return new Response(
-      JSON.stringify({ error: 'No articles' }), {
+      JSON.stringify({ error: 'No article' }), {
       status: 400,
       headers: { 'Content-Type': 'application/json' }
     }

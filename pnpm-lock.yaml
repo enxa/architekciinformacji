@@ -17,12 +17,24 @@ dependencies:
   '@astrojs/vercel':
     specifier: ^6.1.1
     version: 6.1.1(astro@4.0.8)
+  '@fontsource-variable/manrope':
+    specifier: ^5.0.18
+    version: 5.0.18
+  '@fontsource/manrope':
+    specifier: ^5.0.18
+    version: 5.0.18
+  '@studio-freight/lenis':
+    specifier: ^1.0.33
+    version: 1.0.33
   astro:
     specifier: ^4.0.8
     version: 4.0.8(typescript@5.3.3)
   autoprefixer:
     specifier: ^10.4.16
     version: 10.4.16(postcss@8.4.32)
+  nanostores:
+    specifier: ^0.9.5
+    version: 0.9.5
   postcss-easings:
     specifier: ^4.0.0
     version: 4.0.0(postcss@8.4.32)
@@ -30,7 +42,7 @@ dependencies:
     specifier: ^9.3.0
     version: 9.3.0(postcss@8.4.32)
   svelte:
-    specifier: ^5.0.0-next.1
+    specifier: 5.0.0-next.27
     version: 5.0.0-next.27
   typescript:
     specifier: ^5.3.3
@@ -1050,6 +1062,14 @@ packages:
     dev: false
     optional: true
 
+  /@fontsource-variable/manrope@5.0.18:
+    resolution: {integrity: sha512-BmTWanceVCX3/xAY0VhBLM9fwEwe+Z/jR3/EPDLxas6+b3gnBChI+MYh+vMxDPEavfpEhcQptCCNJ3kQxn07iw==}
+    dev: false
+
+  /@fontsource/manrope@5.0.18:
+    resolution: {integrity: sha512-rcH+NXafXbKaLU+xS5VRAOBvI1FOf2VvLUYv3TQXpF9HETtpWwLb9+/4N/kFOA/0YneqkQal+YTqTYEmqGip1g==}
+    dev: false
+
   /@img/sharp-darwin-arm64@0.33.1:
     resolution: {integrity: sha512-esr2BZ1x0bo+wl7Gx2hjssYhjrhUsD88VQulI0FrG8/otRQUOxLWHMBd1Y1qo2Gfg2KUvXNpT0ASnV9BzJCexw==}
     engines: {glibc: '>=2.26', node: ^18.17.0 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0', yarn: '>=3.2.0'}
@@ -1448,6 +1468,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@studio-freight/lenis@1.0.33:
+    resolution: {integrity: sha512-Pfoimwwsf8oVuneQg3KoigUDlo1S+rE+m2Tz7b+zMNAEi0UAhox+PG/ksLHa8ktQhlsuWODeQFCl8VHBxqOtfw==}
+    dev: false
 
   /@sveltejs/vite-plugin-svelte-inspector@2.0.0(@sveltejs/vite-plugin-svelte@3.0.1)(svelte@5.0.0-next.27)(vite@5.0.10):
     resolution: {integrity: sha512-gjr9ZFg1BSlIpfZ4PRewigrvYmHWbDrq2uvvPB1AmTWKuM+dI1JXQSUu2pIrYLb/QncyiIGkFDFKTwJ0XqQZZg==}
@@ -3723,6 +3747,11 @@ packages:
     resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+    dev: false
+
+  /nanostores@0.9.5:
+    resolution: {integrity: sha512-Z+p+g8E7yzaWwOe5gEUB2Ox0rCEeXWYIZWmYvw/ajNYX8DlXdMvMDj8DWfM/subqPAcsf8l8Td4iAwO1DeIIRQ==}
+    engines: {node: ^16.0.0 || ^18.0.0 || >=20.0.0}
     dev: false
 
   /needle@2.9.1:

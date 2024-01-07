@@ -1,0 +1,52 @@
+---
+const { entry } = Astro.props
+
+import { formatDate } from '../scripts/formatDate'
+---
+
+<script>
+  import { observer } from '../scripts/observer'
+  
+  customElements.define('article-page', class ArticlePage extends HTMLElement {
+    constructor() { super()
+      observer.observe(this)
+    }
+  })
+</script>
+
+<article-page>
+  <article>
+    <picture>
+      <source srcset={'/images/large/' + entry.data.image} media="(min-width: 2560px)">
+      <source srcset={'/images/medium/' + entry.data.image} media="(min-width: 1280px)">
+      <source srcset={'/images/small/' + entry.data.image} media="(min-width: 0px)">
+      <img transition:name={entry.slug} src={'/images/small/' + entry.data.image} alt={entry.data.title} />
+    </picture>
+    <div>
+      <small>{formatDate(entry.data.pubDate)}</small>
+      <h3>{entry.data.title}</h3>
+    </div>
+    <p>{entry.body}</p>
+  </article>
+</article-page>
+
+<style>
+article-page {
+  article {
+    min-height: 40vh;
+    max-height: 60vh;
+    columns: 3 auto;
+    gap: 0 5rem;     
+    @media screen and (min-width: 960px) {
+      gap: 0 10rem;      
+    }
+    div {
+      break-inside: avoid;
+    }
+    small {
+      color: var(--color-satan);
+      font-size: var(--font-size);
+    }
+  }
+}
+</style>

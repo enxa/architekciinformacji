@@ -1,0 +1,50 @@
+<header>
+  <nav class="rim">
+    <div class="logos">
+      <a href="https://www.ibik.umk.pl/#new_tab">
+        <img src="/assets/icon-ibik.svg" alt="Link do strony Instytutu Badań Informacji i Komunikacji" />
+      </a>
+      <a href="/">
+        <img src="/assets/icon-sknai.svg" alt="Logo Studenckiego Koła Naukowego Architektów Informacji" />
+      </a>
+    </div>
+    <div class="links" >
+      <a href="/">O nas</a>
+      <a href="/podcast">Podcast</a>
+      <a href="/articles">Aktualności</a>
+      <a href="/search">Szukaj...</a>
+    </div>
+  </nav>
+</header>
+
+<style>
+header {
+  nav {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    gap: var(--font-size-1);
+    z-index: 100;
+    @media screen and (min-width: 960px) {
+      flex-flow: row nowrap;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      gap: var(--font-size-3);
+      a {
+        text-transform: uppercase;
+        font-weight: var(--font-bold);
+        color: var(--color-text);
+        img {
+          height: var(--font-size-2)
+        }
+      }
+    }
+  }
+}
+</style>

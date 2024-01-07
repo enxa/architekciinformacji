@@ -1,0 +1,74 @@
+---
+const { entry } = Astro.props
+
+import { formatDate } from '../scripts/formatDate'
+---
+
+<script>
+  import { observer } from '../scripts/observer'
+
+  customElements.define('article-card', class ArticleCard extends HTMLElement {
+    constructor() { super()
+      observer.observe(this)
+    }
+  })
+</script>
+
+<article-card>
+  <a href={'/' + entry.slug}>
+    <figure>
+      <picture>
+        <source srcset={'/images/large/' + entry.data.image} media="(min-width: 2560px)">
+        <source srcset={'/images/medium/' + entry.data.image} media="(min-width: 1280px)">
+        <source srcset={'/images/small/' + entry.data.image} media="(min-width: 0px)">
+          <img transition:name={entry.slug} src={'/images/small/' + entry.data.image} alt={entry.data.title} />
+      </picture>
+      <figcaption>
+        <span>{entry.data.title}</span><br><br>
+        <small>{formatDate(entry.data.pubDate)}</small>
+      </figcaption>
+    </figure>
+  </a>
+</article-card>
+
+<style>
+article-card {
+  &.in-viewport img, &.in-viewport figcaption {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
+  }
+  &.out-viewport img, &.out-viewport figcaption {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%)
+  }
+  & img, & figcaption {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%)
+  }
+  a {
+    display: grid;
+    figure {
+      picture {
+        overflow: hidden;
+        img {
+          max-height: 100%;
+          aspect-ratio: 1 / 1;
+          object-fit: cover;
+          transition: 1s transform easeOutCirc;
+          filter: blur(calc(var(--velocity) * 0.1px));
+          transition: clip-path 1.2s easeInOutCirc;
+        }
+      }
+      figcaption {
+        text-align: right;
+        transition: clip-path 0.8s 0.4s easeInOutCirc;
+        span {
+          color: var(--color-text);
+          font-size: var(--font-size-1);
+        }
+        small {
+          color: var(--color-satan);
+          font-size: var(--font-size);
+        }
+      }
+    }
+  }
+}
+</style>

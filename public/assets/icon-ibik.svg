@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 300 75">
+  <g>
+    <path fill="#0050a9" d="M38.593 61.711C28.578 66.55 16.175 64.818 7.87 56.513-2.623 46.02-2.623 28.98 7.87 18.487c10.494-10.494 27.533-10.494 38.027 0 8.304 8.304 10.037 20.708 5.197 30.723-3.499-2.496-8.396-2.174-11.535.965-3.139 3.14-3.461 8.036-.966 11.536Z"/>
+    <path fill="#aa2896" d="M42.728 53.344c1.749-1.749 4.589-1.749 6.338 0 1.749 1.749 1.749 4.589 0 6.338-1.749 1.749-4.589 1.749-6.338 0-1.749-1.749-1.749-4.589 0-6.338Z"/>
+    <path fill="#fc0" d="M20.546 31.162c3.498-3.498 9.177-3.498 12.675 0 3.498 3.498 3.498 9.178 0 12.676-3.498 3.498-9.177 3.498-12.675 0-3.498-3.498-3.498-9.178 0-12.676Z"/>
+  </g>
+  <g fill="#1552a4" font-size="75">
+    <text x="89.31" y="77.862" font-family="&quot;Lato-Light&quot;,&quot;Lato&quot;,sans-serif" font-weight="300" transform="translate(-6.51624) scale(.75)">IBIK</text>
+    <text x="231.735" y="77.862" font-family="&quot;Lato-Bold&quot;,&quot;Lato&quot;,sans-serif" font-weight="700" transform="translate(-6.51624) scale(.75)">UMK</text>
+  </g>
+</svg>

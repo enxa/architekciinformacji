@@ -1,16 +1,15 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro'
+import ArticlePage from '../components/ArticlePage.astro'
 import { GET } from './[article].json.ts'
 
 let response = await GET(Astro)
 const data = await response.json()
+
+console.log(data)
 ---
 
 <MainLayout>
-  <div>
-    <h1>Data:</h1>
-    <pre>
-      {JSON.stringify(data)}
-    </pre>
-  </div>
+  {data.error && <h4>{data.error}</h4>}
+  {!data.error && <ArticlePage entry={data} />}
 </MainLayout>

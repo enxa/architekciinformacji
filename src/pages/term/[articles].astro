@@ -1,0 +1,13 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro'
+import ArticlesCards from '../../components/ArticlesCards.astro'
+import { GET } from './[articles].json'
+
+let response = await GET(Astro)
+const data = await response.json()
+---
+
+<MainLayout>
+  {data.error && <h4>{data.error}</h4>}
+  {!data.error && <ArticlesCards entries={data} />}
+</MainLayout>
